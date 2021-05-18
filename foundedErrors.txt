@@ -1,0 +1,23 @@
+***Найденные ошибки компиляции
+<описание ошибки>. <описание исправления>. Исправлена(ы) строка(и) <номер(а) строк> в файле <относительный путь к файлу из корневой папки> ...
+1) ReferenceError: Router is not defined  var router = require('express').Router(); 1 in /controllers/usecontroller.js
+2) Error: Cannot find module 'bcrypt' npm install bcrypt --save
+3) TypeError: require(...).import is not a function /controllers/usercontroller.js:5 var User = require('../models/user');
+4) TypeError: require(...).import is not a function var Game = require('../db').import('../models/game');
+var Game = require('../models/game');
+5) SyntaxError: Unexpected token ( var Game = require('../models/game'); module.exports = function(sequelize, DataTypes) {
+6) ReferenceError: routers is not defined module.exports = routers;
+7) ReferenceError: routers is not defined  /controllers/gamecontroller.js:116
+module.exports = router;
+8)TypeError: db.sync is not a function
+/Debug-in-Node.js/app.js:8 //
+9) TypeError: require(...).import is not a function
+/Debug-in-Node.js/middleware/validate-session.js:2
+const User = require('../models/user');
+10) Error: SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:5432
+db.js/3
+***Найденные ошибки логики приложения
+<описание ошибки>. <описание исправления>. Исправлена(ы) строка(и) <номер(а) строк> в файле <относительный путь к файлу из корневой папки> ...
+***Рефактор кода
+<Описание, что было изменено>
+var -> let, const
