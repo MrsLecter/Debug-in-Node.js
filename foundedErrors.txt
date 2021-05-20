@@ -16,8 +16,27 @@ module.exports = router;
 const User = require('../models/user');
 10) Error: SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:5432
 db.js/3
+11) sequelize deprecated String based operators are now deprecated.
+node_modules/sequelize/lib/sequelize.js:245:13
+   operatorsAliases: false
+
+12) 
 ***Найденные ошибки логики приложения
 <описание ошибки>. <описание исправления>. Исправлена(ы) строка(и) <номер(а) строк> в файле <относительный путь к файлу из корневой папки> ...
+1)  const { Sequelize, DataTypes, Model } = require('sequelize');
+
+
+
 ***Рефактор кода
 <Описание, что было изменено>
 var -> let, const
+
+const PORT = 5432;
+app.listen(PORT, () => {
+    console.log(`App is listening on ${PORT}`);
+})
+
+;
+        console.log("Connected to DB");
+        });
+        db.js
