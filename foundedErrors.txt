@@ -25,8 +25,16 @@ node_modules/sequelize/lib/sequelize.js:245:13
 <описание ошибки>. <описание исправления>. Исправлена(ы) строка(и) <номер(а) строк> в файле <относительный путь к файлу из корневой папки> ...
 1)  const { Sequelize, DataTypes, Model } = require('sequelize');
 
+14) function findSuccess(data) {
+function findSuccess(game) {
+gamecontroller /7
 
+15)         passwordhash: bcrypt.hashSync(req.body.user.password, 10),
+usercontroller 11 :         passwordHash: bcrypt.hashSync(req.body.user.password, 10),
 
+16)    owner_id: req.user
+   owner_id: req.user.id
+   gamecontroller 76
 ***Рефактор кода
 <Описание, что было изменено>
 var -> let, const

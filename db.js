@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes, Model } = require('sequelize');
+const { Sequelize } = require('sequelize');
 const PORT_DB = 5432;
 //database username   password
 const sequelize = new Sequelize('postgres', 'postgreuser', 'ghastb01',{
@@ -7,6 +7,9 @@ const sequelize = new Sequelize('postgres', 'postgreuser', 'ghastb01',{
     dialect: 'postgres',
     operatorsAliases: false
 });
+
+const User = require('./models/user')(sequelize, Sequelize);
+const Game = require('./models/game')(sequelize, Sequelize);
 
 sequelize.authenticate().then(
     function success() {
@@ -17,3 +20,5 @@ sequelize.authenticate().then(
         console.log(`Error: ${err}`);
     }
 );
+
+module.exports = { sequelize, User, Game };
